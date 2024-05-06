@@ -1,9 +1,11 @@
+import asyncio
 from fastapi import FastAPI, Request
 from fastapi.responses import JSONResponse
 from deep_translator import MyMemoryTranslator, GoogleTranslator
 from starlette.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 
+asyncio.Queue()
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
