@@ -1,5 +1,6 @@
 #app.py
 
+import uvicorn
 from fastapi import FastAPI
 
 app = FastAPI()
@@ -11,5 +12,5 @@ def hello_world():
 
 
 if __name__ == '__main__':
-    import uvicorn
+    
     uvicorn.run(app)
